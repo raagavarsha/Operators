@@ -1,0 +1,59 @@
+#<script>
+        //1. write a program to check if the number is divisible by 2 and 3 and both(take prompt)
+        //let a=prompt("Enter a number: ")
+        //if (a % 2 == 0 && a % 3 == 0) {
+        //    document.write("It is divisible by both 2 and 3");
+        //} else if(a % 2 == 0 && a % 3 !== 0){
+        //    document.write("The number is only divisible by 2");
+        //} else if(a % 2 !== 0 && a % 3 == 0){
+        //    document.write("The number is only divisible by 3");
+        //}
+        //2. write a program to find the largest number out of three numbers expected from the user
+        //let a=prompt("Enter first number: ");
+        //let b=prompt("Enter second number: ");
+        //let c=prompt("Enter third number: ");
+        //if (a > b && a > c){
+        //    document.write(a + " " + "is the largest");
+        //} else if( b > a && b > c){
+        //    document.write(b + " " + "is the largest");
+        //} else{
+        //    document.write(c + " " + "is the largest");
+        //}
+        //3. write a program to take the following inputs from the user and calculate the percentage of a class
+        //a. total no. of working days
+        //b. total number of days absent
+        //let a = prompt("Enter the total number of working days: ");
+        //let b = prompt("Enter the total number of days the student is absent: ");
+        //a = Number(a);
+        //b = Number(b);
+        //let c = a - b;
+        //let d = (c / a) * 100;
+        //if (a > 0) {
+        //    document.write("Attendance Percentage: " + d.toFixed(2));
+        //} else {
+        //    document.write("Total working days cannot be zero.");   
+        //}
+        //4. a company decided to give bonus to employee according to the following criteria
+        //Time period of Service Bonus
+        //More than 10 years  10% 
+        //>=6 and <=10         8% 
+        //Less than 6 years    5%
+        //Ask the user for their salary and years of service and print the bonus amount
+        let a = prompt("Enter your years of service: ");
+        let b = prompt("Enter your current salary: ");
+        let c;
+        if (a > 10) {
+            c = 0.10;
+            document.write("The bonus is 10% <br>");
+        } else if (a >= 6 && a <= 10) {
+            c = 0.08;
+            document.write("The bonus is 8% <br>");
+        } else {
+            c = 0.05;
+            document.write("The bonus is 5% <br>");
+        }
+        let d = b * c;
+        document.write(`Your bonus amount is: ${d.toFixed(2)}/-`);
+        let e = d + b;
+        document.write(`Your new salary will be: ${e.toFixed(2)}/-`);
+    </script>
