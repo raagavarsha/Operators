@@ -1,0 +1,101 @@
+#<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let a=prompt("Enter a number: ");
+        //switch(true){
+        //    case a>0:
+        //    document.write("Number is positive.");
+        //    break;
+
+        //    case a==0:
+        //    document.write("The number is zero.");
+        //    break;
+
+        //    case a<0:
+        //    document.write("Number is negative.");
+
+        //    default:
+        //    console.log("Invalid input.");
+        //} 
+
+        //let a=prompt("Enter the day");
+        //switch(true){
+        //    case a=="Monday":
+        //    case a=="Tuesday":
+        //    case a=="Wednesday":
+        //    case a=="Thursday":
+        //        document.write("It is a weekday.");
+        //        break;
+
+        //    case a=="Friday":
+        //    case a=="Saturday":
+        //    case a=="Sunday":
+        //        document.write("It is a weekend.");
+        //        break;
+
+        //  default:
+        //        document.write("Invalid day.");
+        //}
+        
+        //let a = parseInt(prompt("Enter the number of units: "), 10);
+        //if (a > 0) {
+        //    let totalBill = 0;
+        //    if (a <= 50) {
+        //        totalBill = a * 2;
+        //    } else if (a <= 150) {
+        //        totalBill = (50 * 2) + ((a - 50) * 3);
+        //    } else if (a <= 250) {
+        //        totalBill = (50 * 2) + (100 * 3) + ((a - 150) * 5);
+        //    } else {
+        //        totalBill = (50 * 2) + (100 * 3) + (100 * 5) + ((a - 250) * 8);
+        //    }
+        //    totalBill += totalBill * 0.2;
+        //    document.write("Total Bill: " + totalBill);
+        
+        //if (charge !== undefined) {
+        //    let b = charge;
+        //    let finalBill = b * 1.2; 
+        //    document.write("The final bill after adding 20% is: " + finalBill);
+        //}
+
+        //const n = prompt("Enter the number of students:");
+        //let handshakes;
+        //if (n < 2) {
+        //   handshakes = 0;
+        //} else {
+        //   handshakes = (n * (n - 1)) / 2;
+        //}
+        //document.write(`The number of handshakes made by the students is: ${handshakes}`);
+
+        const a = prompt("Enter the first number:");
+        const b = prompt("Enter the second number:");
+        
+        if (a>b){
+            document.write("Invalid range.");
+        } else{
+            document.write(`Prime numbers between ${a} and ${b}:`);
+            for (let num=a; num<=b; num++){
+                if (num>1) {
+                    let isPrime=true;
+                    for (let i=2; i<=Math.sqrt(num); i++){
+                        if (num%i===0) {
+                            isPrime=false;
+                            break;
+                        }
+                    }
+                    if (isPrime){
+                        document.write(num);
+                    }
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>
