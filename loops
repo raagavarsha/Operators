@@ -16,8 +16,8 @@
         // when we initialize the loop letting i=2 and with the condition that checks whether i is less than 9, since 2 < 9, the loop executes iterating i where i=i+2
         //and it prints the final i adding 3 to it, therefore, when i is 2, the final i becomes 2+2=4 and the output will be 4+3 = 7, and so on
         //for(let i=1;i<=5;i++){
-        //    document.write("chiru","<br>")
-        //    console.log("chiru")
+        //    document.write("varsha","<br>")
+        //    console.log("varsha")
         //}
         //for (let i = 1; i <= 10; i++) {
         //    document.write(`9 x ${i} = ${i * 9}<br>`);
