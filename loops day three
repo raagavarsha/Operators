@@ -1,0 +1,37 @@
+#<script>
+        //for(let i = 1; i <= 8; i = i+2){
+        //    if(i > 5){
+        //        continue;
+        //    }
+        //    document.write(i+1, "<br>");
+        //}
+        //for(let i = 2; i <= 8; i = i+2){
+        //    if(i > 5){
+        //        continue;
+        //    }
+        //    document.write(i+2, "<br>");
+        //}
+        //for(let i=1; i<=3; i++){
+        //    document.write(i, "<br>");
+
+        //    for(let j=1;j<=4;j++){
+        //        document.write(j, "<br>");
+        //    }
+        //    document.write("<br>");
+        //}
+        //for (let i = 1; i <= 5; i++) {
+        //    let a = '';
+        //    for (let j = 1; j <= i; j++) {
+        //        a += '*';
+        //    }
+        //    document.write(a + "<br>");
+        //}
+        //const rows = 5;
+        //for (let i = rows; i >= 1; i--) {
+        //    let line = "";
+        //    for (let j = 0; j < rows - i; j++) line += "  ";
+        //    for (let k = 0; k < 2 * i - 1; k++) line += "* ";
+        //    document.write(line);
+        //}
+        
+    </script>
