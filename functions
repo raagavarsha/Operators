@@ -1,0 +1,40 @@
+#<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function greet(){
+        //    document.write("Hi Varsha!");
+        //}
+        //greet()
+        //document.write("Hi Raaga!");
+        //greet()
+        //documen.write("Hi Manu!");
+        //function g(name) {
+        //    document.write(`Hi ${name}`);
+        //}
+        //let name = prompt("Enter your name: ");
+        //g(name);
+        //function addNumbers(a, b) {
+        //    return a + b;
+        //}
+        //let a = parseFloat(prompt("Enter the first number (a): "));
+        //let b = parseFloat(prompt("Enter the second number (b): "));
+        //let result = addNumbers(a, b);
+        //document.write("The result is: " + result);
+        //}
+        //function fibonacciSeries(n) {
+        //    let fib = [0, 1]; 
+        //    for (let i = 2; i < n; i++) {
+        //        fib.push(fib[i - 1] + fib[i - 2]); 
+        //    }
+        //    console.log(fib.join(", "));
+        //}
+        //fibonacciSeries(10);
+    </script>
+</body>
+</html>
