@@ -1,0 +1,74 @@
+#Arrow functions
+1.Es6 version
+2.More readable and more structure
+3.Anonymous functions(lambda)
+4.Without function name but they are assigned to a variable
+Examplr:
+Arrow functions without parameter
+Let C=()=>{
+Console.log(“Hello world”)
+}
+
+Arrow functions with parameter
+Example:
+let x=(x,y)=>{
+Console.log(x+y)
+}
+X(20,30)
+X(40,50)
+
+Without using parenthesis
+Let greet x=> console.log(x);
+Greet(“Hello”)
+
+Example: 
+//conditional statements
+//loops
+//functions
+// classes
+// lambda, map, filter
+
+Without using arguments
+Let greet=()=>console.log(“hello”)
+Greet()
+
+Arrow functions as an expression
+Let age=18
+Let welcome=(age<18)?
+()=>console.log(“hi varsha”):
+()=>console.log(“hi girls”);
+Welcome()
+
+Synchronous function-step by step in an order , execution
+Example:
+Function task1(){
+Console.log(“Task1: Start”)
+}
+Function task2(){
+Console.log(“Task2 : Start”)
+}
+Function task3(){
+Console.log(“Task3 : Start”)
+}
+Task1()
+Task2()
+Task3()
+
+Asynchronous function:- used to execute multiple functions at a time
+console.log(“HI varsha”);
+setTimeout(()=>{
+console.log(“Hello, I am hungry”);
+},5000);
+console.log(“I am at cafeteria”);
+
+JavaScript callback functions:
+A callback function is a function that is passed argument to another function
+Example:
+function greet(name,callback){
+Console.log(hello, ${name})
+callback();
+}
+function  sayGoodbye(){
+console.log(“Goodbye”)
+}
+greet(“Sam”,sayGoodbye)
