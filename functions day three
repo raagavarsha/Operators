@@ -1,0 +1,37 @@
+#<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function myCallback(data, callback1, callback2) {
+        //    document.write(data,"<br>");
+        //    callback1(data);
+        //    callback2(data);
+        //}
+        //function callback1(data) {
+        //    document.write('Callback 1:', data,"<br>");
+        //}
+        //function callback2(data) {
+        //    document.write('Callback 2:', data,"<br>");
+        //}
+        //myCallback('Hello, World!', callback1, callback2);
+        //function greet(name ,callback){
+        //    document.write("hello"+name);
+        //    callback();
+        //    //it will execute the callbackfunction after greeting
+        //}
+        //function goodbye(){
+        //    document.write("a good very morning!");
+        //}
+        //greet("Varsha" ,goodbye);
+        //setTimeout(function() {
+        //    document.write("Anonymous function with setTimeout");
+        //}, 5000);
+        
+    </script>
+</body>
+</html>
