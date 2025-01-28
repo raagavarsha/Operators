@@ -1,0 +1,76 @@
+#DOM:- Document object model
+It is a programming interface in web development that allows us to interact with as well as manipulate the html documents
+When the webpage is loaded, the browser creates the document object model of the webpage.
+When an html file is loaded  into the browserm the JavaScript cannot understand the html document directly
+DOM is bascially the representation of same html document but in a treelike structure composed of objects
+Html dom it allows JavaScript to access and modify all the elements in the HTML document.
+
+Keypoints:
+1.Structure: the DOM represents the structure of html document as tree; each node in a tree represents the element , an attribute, text
+2.Manipulation: using js, you can interact with elements like buttons, headings, paragraphs.
+3.Event handling:
+4.W3C: world wide web cosortium
+
+<html>
+<head>
+<body>  
+…content in a tree like structure
+
+</body>
+</<head>
+</html>
+
+In dom all html elements are defined objects
+Property: value that you can set to the objects(like changing content of a html element)
+Method: an action(like adding or deleting)
+
+Methods of DO:
+1.Getting element by id
+2.Getting element by class: returns all the elements having the same class name, return in the form of a html collection object
+3.Getting an element by tagname
+4.Getting an element by query selector
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .a {
+        color: red;
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+    }
+    .b {
+        color: blue;
+        font-size: 20px;
+        font-family: Verdana, sans-serif;
+    }
+    .c {
+        color: green;
+        font-size: 18px;
+        font-family: "Courier New", monospace;
+    }
+</style>
+<body>
+    <h1 class="a">
+        varsha
+    </h1>
+    <h1 class="b">
+        manu
+    </h1 >
+    <h1 class="c">
+        siri
+    </h1>
+    <h1 class="a">
+        sanjana
+    </h1>
+    <h1 class="c">
+        harini
+    </h1>
+    <h1 class="b">
+        nitya
+    </h1>
+</body>
+</html>
