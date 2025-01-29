@@ -41,3 +41,35 @@
     </script>
 </body>
 </html>
+In DOM all elements are defined as objects
+	Property: is a value that you can set to the objects.(like changing the content of html element)
+	Method: an action (like add or delete)
+	Getting element by id
+	let js = document.getElementById('a');
+	        console.log(js);
+
+
+	Getting element by classname
+	Returns all the elements having the same class name.
+	let q = document.getElementsByClassName('a');
+	        console.log(q);
+	        for(let i=0;i<q.length;i++){
+	          console.log(q[i]);
+	        }
+	
+	Getting element by tagname
+	let k = document.getElementsByTagName('h1');
+	        document.write(k);
+
+	Getting element by query selector
+	Used to select HTML element with classname, tagname 
+
+Manipulate Elements:
+To create a HTML element
+•	createElement()
+•	the method used to create a html element
+•	let k = document.createElement('h1');
+•	        k.className = 'b';
+•	        k.textContent = 'Hello';
+•	        console.log(k)
+•	        document.body.appendChild(k);
