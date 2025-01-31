@@ -1,0 +1,96 @@
+#DOM methods:
+	
+	insertBefore():- used to insert a new node before an existing node as child node of a specified parent.
+
+	Requires a reference to both the new node and existing node you want to insert before.
+
+Example:-
+
+<body>
+    <div id="a">
+        <h1>Hi</h1>
+        <h1>world</h1>
+    </div>
+    <div id="b">
+        <h2 id="r">2</h2>
+        <h2>3</h2>
+    </div>
+    <script>
+        let n=document.createElement('h2')
+        n.textContent='1'
+
+        let p=document.getElementById('b')
+        let l=document.getElementById('r')
+
+        p.insertBefore(n,l)
+    </script>
+</body>
+
+Remove element: 
+Let b=document.getElementByID(“a”)
+B.remove()	//removes it completely
+Remove child
+Replace
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="a">
+        <h1>Hi</h1>
+        <h1>world</h1>
+    </div>
+    <div id="b">
+        <h2 id="r">2</h2>
+        <h2>3</h2>
+    </div>
+    <script>
+        let n=document.createElement('h2')
+        n.textContent='1'
+
+        let p=document.getElementById('b')
+        let l=document.getElementById('r')
+
+        p.insertBefore(n,l)
+    </script> -->
+    <!-- <div id="a">
+        <h1>Ravi</h1>
+        <h1 id="r">Ram</h1>
+    </div>
+    <div id="b">
+        <h2>Sam</h2>
+        <h2>venkat</h2>
+    </div>
+    <script>
+        let n=document.createElement('h2').
+        n.textContent='jaya'
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l) -->
+        <div id="a">
+            <h1>Ravi</h1>
+            <h1 id="rr">Ram</h1>
+        </div>
+        <div id="b">
+            <h2>Sam</h2>
+            <h2>venkat</h2>
+        </div>
+        <script>
+        let n=document.createElement('h2')
+        n.textContent='jaya'
+        let p=document.getElementById("a")
+        let l=document.getElementById("r")
+        p.insertBefore(n,l)
+
+        let nn=document.createElement('h2')
+        nn.textContent='Ganesh'
+
+        let pp=document.getElementById("a")
+        let ll=document.getElementById("rr")
+        pp.insertBefore(nn,ll)
+        </script>
+    </script>
+</body></html>
