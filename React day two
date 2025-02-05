@@ -85,7 +85,7 @@
     <div id="a"> </div>
     <script type="text/babel">
         function getGreeting(name){
-            return Hello ${name}! Welcome to React
+            return `Hello ${name}! Welcome to React`
         }
 
         function Greeting(){
