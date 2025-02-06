@@ -1,0 +1,23 @@
+#js
+import React from "react";
+import './App.css';
+
+const Welcome=()=> <h1 className="message">Hello Varsha</h1>
+
+function App() {
+  return(
+    <div className="App">
+      <Welcome />
+    </div>
+  )
+}
+export default App;
+#css
+.message{
+  color: rgb(227, 40, 202);
+  background-color: rgb(218, 185, 212);
+  font-size: 40px;
+  text-align: center;
+  width: 30%;
+  margin-left: 35%;
+}
