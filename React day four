@@ -1,0 +1,185 @@
+#<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex ;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .light-bulb{
+            width:150px
+        }
+        .button{
+            margin-top: 20px;
+            padding: 10px 20px ;
+            font-size: 10px;
+            cursor: pointer;
+
+        }
+
+    </style>
+</head>
+<body id="body">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" alt ="" class="light-bulb" id="bulbImage"/>
+
+    <button class="button" id="toggleButton" onClick="toggleLight()">Turn On</button>
+
+    <script>
+        let isOn=false;
+        function toggleLight(){
+            const body=document.getElementById("body")
+            const bulbImage=document.getElementById('bulbImage')
+            const toggleButton=document.getElementById('toggleButton')
+
+            if(isOn=!isOn);
+            if(isOn){
+                body.style.backgroundColor='lightyellow ';
+                bulbImage.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+                toggleButton.innerText='Turn Off';
+            }else{
+                body.style.backgroundColor='black';
+                bulbImage.src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+                toggleButton.innerText="Turn On";
+            }
+            }    
+    </script>  
+</body>
+</html>
+
+#<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Light Bulb</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+        .light-bulb {
+            width: 150px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="body">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" alt="" class="light-bulb" id="bulbImage"/>
+    <button class="button" id="toggleButton" onClick="toggleLight()">Turn On</button>
+    
+    <script>
+        let isOn = false;
+        
+        function getRandomColor() {
+            const colors = ["red", "blue", "green", "purple", "orange", "pink", "cyan", "yellow"];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        function toggleLight() {
+            const body = document.getElementById("body");
+            const bulbImage = document.getElementById("bulbImage");
+            const toggleButton = document.getElementById("toggleButton");
+            
+            isOn = !isOn;
+            
+            if (isOn) {
+                let color = getRandomColor();
+                body.style.backgroundColor = color;
+                bulbImage.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+                toggleButton.innerText = "Turn Off";
+            } else {
+                body.style.backgroundColor = "black";
+                bulbImage.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+                toggleButton.innerText = "Turn On";
+            }
+        }
+    </script>
+</body>
+</html>
+
+#<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Light Bulbs</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: lightyellow;
+            overflow: hidden;
+            position: relative;
+        }
+        .bulb-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+            position: relative;
+        }
+        .light-bulb {
+            width: 100px;
+            position: absolute;
+            transition: transform 0.5s ease-in-out;
+        }
+        .button {
+            margin-top: 200px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="bulb-container" id="bulbContainer">
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="light-bulb" id="bulb1" style="top: 50px; left: 100px;"/>
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="light-bulb" id="bulb2" style="top: 50px; left: 250px;"/>
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="light-bulb" id="bulb3" style="top: 50px; left: 400px;"/>
+        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="light-bulb" id="bulb4" style="top: 50px; left: 550px;"/>
+    </div>
+    <button class="button" id="toggleButton" onClick="toggleLights()">Turn On</button>
+    
+    <script>
+        let isOn = false;
+        
+        function getRandomPosition() {
+            return Math.random() * 100 - 50; 
+        }
+        
+        function toggleLights() {
+            const bulbs = document.querySelectorAll(".light-bulb");
+            const toggleButton = document.getElementById("toggleButton");
+            
+            isOn = !isOn;
+            
+            bulbs.forEach((bulb, index) => {
+                if (isOn) {
+                    bulb.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+                    bulb.style.transform = `translate(${getRandomPosition()}px, ${getRandomPosition()}px)`;
+                } else {
+                    bulb.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+                    bulb.style.transform = "translate(0, 0)";
+                }
+            });
+            
+            toggleButton.innerText = isOn ? "Turn Off" : "Turn On";
+        }
+    </script>
+</body>
+</html>
