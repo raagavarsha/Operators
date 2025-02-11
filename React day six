@@ -1,0 +1,107 @@
+#App.js
+import React from "react";
+import ProfileCard from "./ProfileCard";
+import "./styles.css";
+
+const App = () => {
+  return (
+    <div className="app-container">
+      <h1 className="title">User Profiles</h1>
+      <div className="profile-container">
+        <ProfileCard
+          name="Varsha"
+          greeting="Hello! I love cooking."
+          imageSrc="https://cdn3.iconfinder.com/data/icons/avatars-collection/256/23-1024.png"
+        />
+        <ProfileCard
+          name="Pranav"
+          greeting="Hey there! I enjoy gaming."
+          imageSrc="https://www.366icons.com/media/01/profile-avatar-account-icon-16699.png"
+        />
+        <ProfileCard
+          name="Mihir"
+          greeting="Hi! I'm a travel enthusiast."
+          imageSrc="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+#ProfileCard.js
+import React from "react";
+import './styles.css';
+
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="profile-card">
+      <img src={imageSrc} alt={name} className="profile-image" />
+      <h2 className="profile-name">{name}</h2>
+      <p className="profile-greeting">{greeting}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
+
+#styles.css
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+  }
+
+  .profile-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+  }
+
+  .profile-greeting {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+  }
+  
