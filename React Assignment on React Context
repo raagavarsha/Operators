@@ -1,0 +1,47 @@
+#Prop Drilling Approach:
+#App.js
+import React from "react";
+import './styles.css';
+
+const Profile = ({ user }) => {
+  return (
+    <div>
+      <h2>Profile</h2>
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+};
+
+const NestedComponent = ({ user }) => {
+  return <Profile user={user} />;
+};
+
+const App = () => {
+  const user = { name: "Varsha", email: "raagavarsha@gmail.com" };
+  return <NestedComponent user={user} />;
+};
+
+export default App;
+
+#styles.css
+.profile-card {
+  width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.profile-card h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  color: #666;
+  margin: 5px 0;
+}
