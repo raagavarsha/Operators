@@ -1,0 +1,39 @@
+# Prop drilling:
+#Process of passing data from the parent to deeply nested child component through intermediate components, by passing data as prompts to each level
+
+#App.js
+function App(){
+  const data="I am Varsha"
+  return(
+    <div>
+      <User1 data={data}/>
+    </div>
+  )
+}
+
+function User1({data}){
+  return(
+      <div>
+          <User2 data={data}/>
+      </div>
+  )
+}
+
+function User2({data}){
+  return(
+      <div>
+          <User3 data={data}/>
+      </div>
+  )
+}
+
+#App.css
+div {
+  font-size: 30px;
+  color: green;
+  background-color:aqua;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 50px;
+  text-align: center;
+}
