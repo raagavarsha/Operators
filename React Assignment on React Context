@@ -5,13 +5,14 @@ import './styles.css';
 
 const Profile = ({ user }) => {
   return (
-    <div>
+    <div className="profile-card">
       <h2>Profile</h2>
-      <p>Name: {user.name}</p>
-      <p>Email: {user.email}</p>
+      <p><span>Name:</span> {user.name}</p>
+      <p><span>Email:</span> {user.email}</p>
     </div>
   );
 };
+
 
 const NestedComponent = ({ user }) => {
   return <Profile user={user} />;
