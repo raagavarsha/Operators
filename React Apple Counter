@@ -1,0 +1,197 @@
+#App.js
+import React, { useReducer } from "react";
+import "./App.css";
+
+function appleReducer(state, action) {
+  switch (action.type) {
+    case "ADD_APPLE":
+      return { count: state.count + 1, apples: [...state.apples, "apple"] };
+    case "EAT_APPLE":
+      if (state.count > 0) {
+        return { count: state.count - 1, apples: state.apples.slice(0, -1) };
+      }
+      return state;
+    default:
+      return state;
+  }
+}
+
+function App() {
+  const [state, dispatch] = useReducer(appleReducer, { count: 3, apples: Array(3).fill("apple") });
+
+  return (
+    <div className="container">
+      <h1>Apple Counter</h1>
+      <p className="count">Number of apples: {state.count}</p>
+      <div className="apple-container">
+        {state.apples.map((apple, index) => (
+          <img
+            key={index}
+            className="apple"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtkzZMTh_n9DE3CznuCnA8wVdQI7IQT9sDng&s"
+            alt="apple"
+          />
+        ))}
+      </div>
+      <div className="button-container">
+        <button className="btn add" onClick={() => dispatch({ type: "ADD_APPLE" })}>
+          ADD APPLE
+        </button>
+        <button className="btn eat" onClick={() => dispatch({ type: "EAT_APPLE" })}>
+          EAT APPLE
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+#App.css
+/* General Styling */
+body {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  text-align: center;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.count {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3e3b3b;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.count.updated {
+  transform: scale(1.3) rotate(5deg);
+  color: #ffeb3b;
+  animation: glow 0.6s ease-in-out;
+}
+
+.apple-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+/* Apple Animation */
+.apple {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Apple Hover Effect */
+.apple:hover {
+  transform: scale(1.2) rotate(-10deg);
+  filter: brightness(1.2);
+}
+
+/* Apple Entry Animation */
+.apple.bounce {
+  animation: bounce 0.5s ease-in-out;
+}
+
+/* Button Styling */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add Button */
+.add {
+  background: linear-gradient(45deg, #4caf50, #2e7d32);
+}
+
+.add:hover {
+  background: linear-gradient(45deg, #66bb6a, #388e3c);
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Eat Button */
+.eat {
+  background: linear-gradient(45deg, #f44336, #b71c1c);
+}
+
+.eat:hover {
+  background: linear-gradient(45deg, #e57373, #c62828);
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Button Glow Effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 10%, transparent 60%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+  }
+  100% {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
