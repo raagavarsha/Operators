@@ -1,0 +1,159 @@
+#App.js
+function App(){
+  const handleClick=()=>{
+    alert("Button Clicked.");
+  };
+  return(
+    <button onClick={handleClick}>Click me</button>
+  )
+}
+
+export default App;
+
+#App.js
+import React,{useState} from "react";
+import './App.css';
+
+function App(){
+  const [text,setText]=useState("")
+
+  const handleChange=(event)=>{
+    setText(event.target.value)
+  }
+  return(
+    <div>
+      <input type="text" value={text} onChange={handleChange} />
+      <p>Your text: {text}</p>
+    </div>
+  )
+}
+export default App;
+
+#App.css
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: white;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 400px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+input:focus {
+  transform: scale(1.0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInText 0.5s 0.5s forwards;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#App.js  
+import React,{ useState } from "react";
+import "./App.css"
+function App(){
+
+  const[isHovered, setIsHovered]=useState(false);
+
+  const handleMouseEnter=()=>{
+    setIsHovered(true);
+  }
+
+  const handleMouseLeave=()=>{
+    setIsHovered(false);
+  }
+
+  return(
+    <div className="App">
+      <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} 
+      style={{backgroundColor:isHovered ? "lightblue" : "lightgray",
+              color:isHovered ? "white" : "black"
+      }}> Hover Me</button>
+
+      {isHovered && <p>Mouse is over the button!</p>}
+    </div>
+    )
+}
+
+export default App;
+
+#App.js
+import React,{ useState } from "react";
+import "./App.css"
+function App(){
+
+  const[key, setKey]=useState("");
+
+  const handleKeyDown=(event)=>{
+    setKey(event.key);
+  }
+
+  return(
+    <div className="App">
+      <h1>Welcome to Keyboard!</h1>
+      {key && <h2>Pressed key : {key}</h2>}
+      <input type="text" onKeyDown={handleKeyDown} placeholder="Press any key"/>
+    </div>
+    )
+}
+
+export default App;                             
