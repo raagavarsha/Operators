@@ -1,0 +1,14 @@
+#package com.backend.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.backend.entity.Laptops;
+
+public interface LaptopsRepo extends JpaRepository<Laptops, Integer> {
+      @AutoWired
+      private LaptopsRepo repo; 
+
+      public List<Laptops> getAllLaptops90{
+          return repo.findAll();
+      }
+}
