@@ -8,7 +8,8 @@ public interface LaptopsRepo extends JpaRepository<Laptops, Integer> {
       @AutoWired
       private LaptopsRepo repo; 
 
-      public List<Laptops> getAllLaptops90{
+      @GetMapping("/laptops")
+      public List<Laptops> getAllLaptops(){
           return repo.findAll();
       }
 }
