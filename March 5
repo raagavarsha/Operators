@@ -1,0 +1,26 @@
+#SQL:
+create database 2211cs010486;
+
+use 2211cs010486;
+
+CREATE TABLE mobiles(
+    Id INT PRIMARY KEY,
+    pname VARCHAR(20),
+    pcost DOUBLE,
+    pimg VARCHAR(200),
+    pqyt INT
+);
+
+INSERT INTO mobiles (Id, pname, pcost, pimg, pqyt) VALUES
+(1, 'Samsung S24', 999.99, 'images/samsung_s24.jpg', 50),
+(2, 'iPhone 15 Pro', 1299.99, 'images/iphone15pro.jpg', 30),
+(3, 'OnePlus 12', 899.99, 'images/oneplus12.jpg', 40),
+(4, 'Google Pixel 8', 799.99, 'images/pixel8.jpg', 25),
+(5, 'Xiaomi 14', 749.99, 'images/xiaomi14.jpg', 60),
+(6, 'Realme GT 5', 659.99, 'images/realme_gt5.jpg', 45),
+(7, 'Asus ROG 8', 1099.99, 'images/asus_rog8.jpg', 20),
+(8, 'Vivo X100 Pro', 999.99, 'images/vivo_x100pro.jpg', 35),
+(9, 'Motorola Edge 40', 699.99, 'images/moto_edge40.jpg', 55),
+(10, 'Nothing Phone 2', 799.99, 'images/nothing_phone2.jpg', 30);
+
+select * from mobiles;
